@@ -10,6 +10,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  z-index: 1;
 }
 
 .header__logo {
@@ -28,6 +32,9 @@ header a {
   margin-right: 25px;
 }
 
+
+
+
 button {
   font-family: 'Raleway' sans-serif;
   font-size: 15px;
@@ -39,6 +46,7 @@ button {
   box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
   padding: 15px;
   transition: background-color 0.3s ease-in;
+  text-align: center;
 }
 
 .about {
@@ -81,6 +89,8 @@ button {
 .about__sun-image {
   width: 100px;
   height: 100px;
+  animation: rotation 10s infinite linear;
+  position: absolute;
 }
 
 .form {
@@ -107,12 +117,13 @@ button {
 }
 
 .form input, .form select {
+  border: none;
+  border-radius: 15px;
+  padding: 0 20px;
+  outline: none;
   font-size: 18px;
   color: #213053;
   height: 60px;
-  padding: 0 20px;
-  border-radius: 15px;
-  border: none;
 }
 
 .form__submit {
@@ -174,7 +185,7 @@ footer {
   margin-right: 80px;
 }
 
-.footer__group h3 {
+.footer h3 {
   font-size: 16px;
   opacity: 0.7;
   margin-bottom: 30px;
@@ -187,4 +198,93 @@ footer {
 
 .footer__links a {
   margin-bottom: 15px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 115px 20px;
+  }
+
+  .about__image {
+    max-width: 280px;
+
+  }
+  
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
+  }
+  
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+
+}
+
+@media (max-width: 720px) {
+
+  header{
+    padding: 10px;
+  }
+  
+  header a {
+    margin-right: 10px;
+  }
+  
+  .header__logo {
+    height: 20px;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    padding: 50px 10px;
+  }
+  
+  
+  .about__image {
+    max-width: 280px;
+  }
+
+  .about__sun-image {
+    height: 75px;
+    width: 75px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .form {
+    padding: 50px 10px;
+  }
+
+
+  .form h1 {
+    font-size: 36px; 
+  }
+
+  .footer {
+    padding: 50px 10px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
 }
