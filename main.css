@@ -461,6 +461,10 @@ footer {
     font-size: 36px;
   }
 
+  .promo__btn {
+    text-align: center;
+  }
+
   .form {
     padding: 50px 10px;
   }
