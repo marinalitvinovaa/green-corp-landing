@@ -95,11 +95,12 @@ button {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
+  grid-gap: 50px;
 }
 
 .card {
   padding: 35px 40px 25px;
+  background: #FFFFFF;
   border: 1px solid #D9E4E6;
   border-radius: 5px;
 }
@@ -136,6 +137,7 @@ button {
 }
 
 .features__border {
+  width: 100%;
   margin: 50px 0;
   border: 1px solid #E6EAF4;
 }
@@ -240,10 +242,16 @@ button {
   right: 0;
 }
 
+.promo__btn {
+  display: flex;
+  justify-content: center;
+}
+
 .promo__btn button {
   background-color: #107b1c;
   margin-top: 20px;
   font-size: 18px;
+  box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
   padding: 15px 30px;
   font-weight: 600;
 }
@@ -470,10 +478,8 @@ footer {
   }
 
   .features__feedback-right {
-    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
+    align-items: initial;
   }
 
 
@@ -487,7 +493,6 @@ footer {
   }
   
   .promo {
-    display: flex;
     flex-direction: column-reverse;
   }
 
